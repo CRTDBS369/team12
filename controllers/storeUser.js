@@ -1,4 +1,4 @@
-const User = require('../DB/User.js')
+const User = require('../models/User.js')
 const path = require('path')
 //회원가입시 사용
 module.exports = (req,res)=>{ 

@@ -1,6 +1,8 @@
 const bcrypt = require('bcrypt')
-const User = require('../DB/User')
-//로그인시 사용
+const User = require('../models/User')
+//학번과 교수/학생에 따른 db 접근
+//교수라면 등록해야 하는 수업 접근
+//학생이라면 등록한 수업 접근
 module.exports = (req, res) =>{
     const { userid, password } = req.body;
 

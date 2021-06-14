@@ -1,11 +1,11 @@
 const express = require('express')
 const ejs = require('ejs')
 const app = new express()
-const connectDB = require('./DB/Connection');
+const connectDB = require('./models/Connection');
 const fileUpload = require('express-fileupload')
 
 
-const loginUserController = require('./Api/loginUser')
+const loginUserController = require('./controllers/loginUser')
 
 const homeController = require('./controllers/home')
 const login_registerController = require('./controllers/login_register')
