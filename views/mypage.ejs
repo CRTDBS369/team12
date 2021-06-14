@@ -38,7 +38,7 @@
                   <p class="price"><%= courses[i].classid %></p>
                 </div>
 
-                <h3><a href="course-details.html"><%= courses[i].className %></a></h3>
+                <h3><a href="/streaming/<%= courses[i]._id %>"><%= courses[i].className %></a></h3>
                 <p><%= courses[i].classDescription %></p>
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
@@ -65,7 +65,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+          <h5 class="modal-title" id="exampleModalLabel">강의 등록</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -75,20 +75,51 @@
               <input type="text" class="form-control" id="classid" name="classid">
             </div>
             <div class="mb-3">
-              <label for="recipient-name" class="col-form-label">과목명:</label>
+              <label for="recipient-name" class="col-form-label">강의명:</label>
               <input type="text" class="form-control" id="className" name="className">
             </div>
             <div class="mb-3">
-              <label for="recipient-name" class="col-form-label">과목 설명:</label>
+              <label for="recipient-name" class="col-form-label">강의 설명:</label>
               <input type="text" class="form-control" id="classDescription" name="classDescription">
             </div>
             <div class="mb-3">
-              <label for="recipient-name" class="col-form-label">과목 분류:</label>
+              <label for="recipient-name" class="col-form-label">강의 분류:</label>
               <input type="text" class="form-control" id="classCategory" name="classCategory">
+            </div>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">강의 URL:</label>
+              <input type="text" class="form-control" id="lectureURL" name="lectureURL">
             </div>
             <div class="mb-3">
               <label for="formFile" class="form-label">강의 이미지</label>
               <input class="form-control" type="file" id="image" name="image">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">등록</button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="addLectureModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">X주차 강의 등록</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action = "/lecture/register" method = "POST" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">주차:</label>
+              <input type="number" class="form-control" id="week" name="week">
+            </div>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">강의URL:</label>
+              <input type="text" class="form-control" id="siteURL" name="siteURL">
             </div>
         </div>
         <div class="modal-footer">

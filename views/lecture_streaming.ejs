@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include('layouts/header'); -%>
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+<body>
+
+  <!-- ======= Header and Navbar ======= -->
+  <%- include('layouts/navbar'); -%>
+
+  <main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>Log in / register</h2>
+        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Cource Details Section ======= -->
+    <section id="course-details" class="course-details">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-8">
+            <!-- src에 db에 있는 link 삽입 -->
+            <video src=<%= lectureURL %> width='100%' controls>
+              해당 브라우저는 video 태그를 지원하지 않습니다.
+          </video>
+            <h3>NodeJS 응용</h3>
+            <p>
+              이번주 강의에서는 NodeJS의 응용에 대해 배웁니다
+            </p>
+          </div>
+          <div class="col-lg-4">
+
+            <div class="course-info d-flex justify-content-between align-items-center">
+              <h5>수업</h5>
+              <p><a href="#">고급웹프로그래밍</a></p>
+            </div>
+
+            <div class="course-info d-flex justify-content-between align-items-center">
+              <h5>주차</h5>
+              <p>4주차</p>
+            </div>
+
+            <div class="course-info d-flex justify-content-between align-items-center">
+              <h5>강의제목</h5>
+              <p>NodeJS 응용</p>
+            </div>
+
+            <div class="course-info d-flex justify-content-between align-items-center">
+              <h5>출석기간</h5>
+              <p>5.00 pm - 7.00 pm</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cource Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <%- include('layouts/footer'); -%>
+
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <%- include('layouts/scripts'); -%>
+
+
+</body>
+
+</html>

@@ -32,10 +32,10 @@ const courseSchema = new Schema({
         type: Number,
         default:0
     },
-    lectureList: [{
-      week : Number,
-      siteURL : String
-    }]
+    lectureURL:{
+      type: String,
+      required:true
+    }
   });
 
 

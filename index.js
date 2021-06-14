@@ -40,7 +40,11 @@ app.get('/', homeController)
 app.get('/contact', contactController)
 app.get('/courses',coursesController)
 app.get('/mypage',check_unlogged_in_user_in_mypageMiddleware,mypageController)
-
+app.get('/streaming/:id', async (req, res)=>{
+    const lecture = await course.findById(req.params.id)
+    lectureURL = lecture.lectureURL
+    res.render('lecture_streaming',{lectureURL})
+})
 
 app.post('/users/login', loginUserController)
 app.post('/users/register',checkboxMiddleware, storeUserController)
