@@ -18,7 +18,9 @@ const UserSchema = new Schema({
     isProfessor: {
       type: Boolean,
       required: true
-    }
+    },registeredLecture:[
+      {classid:String}
+    ]
   });
 
 

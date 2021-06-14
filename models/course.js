@@ -8,15 +8,34 @@ const courseSchema = new Schema({
       required: true,
       unique: true 
     },
+    className: {
+      type: String,
+      required: true, 
+    },
+    classImage: {
+      type: String,
+      required: true, 
+    },
+    classDescription: {
+      type: String,
+      required: true, 
+    },
+    classCategory: {
+      type: String,
+      required: true, 
+    },
     professor: {
       type: String,
       required: true,
     },
-    classname: {
-        type: String,
-        required: true,
-        unique: true 
-    }
+    studentCount: {
+        type: Number,
+        default:0
+    },
+    lectureList: [{
+      week : Number,
+      siteURL : String
+    }]
   });
 
 

@@ -13,8 +13,8 @@
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs">
       <div class="container">
-        <h2>Courses</h2>
-        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
+        <h2>My Page</h2>
+        <p>내가 수강/개설한 강의를 모아 볼 수 있습니다. </p>
       </div>
     </div><!-- End Breadcrumbs -->
 
@@ -22,6 +22,10 @@
     <section id="courses" class="courses">
       <div class="container" data-aos="fade-up">
 
+          <button type="button" class="btn get-started-btn w-100" data-bs-toggle="modal" data-bs-target="#newLectureModal">새 강의 등록하기</button>
+          <br>
+          <br>
+          
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
@@ -109,6 +113,44 @@
 
   </main><!-- End #main -->
 
+  <div class="modal fade" id="newLectureModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action = "/lecture/register" method = "POST" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">과목코드:</label>
+              <input type="text" class="form-control" id="classid" name="classid">
+            </div>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">과목명:</label>
+              <input type="text" class="form-control" id="className" name="className">
+            </div>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">과목 설명:</label>
+              <input type="text" class="form-control" id="classDescription" name="classDescription">
+            </div>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">과목 분류:</label>
+              <input type="text" class="form-control" id="classCategory" name="classCategory">
+            </div>
+            <div class="mb-3">
+              <label for="formFile" class="form-label">강의 이미지</label>
+              <input class="form-control" type="file" id="image" name="image">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">등록</button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
   <!-- ======= Footer ======= -->
   <%- include('layouts/footer'); -%>
 
