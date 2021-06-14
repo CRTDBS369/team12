@@ -15,7 +15,7 @@ const UserSchema = new Schema({
     username: {
         type: String
     },
-    Auth: {
+    isProfessor: {
       type: Boolean,
       required: true
     }
