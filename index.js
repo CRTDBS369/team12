@@ -9,6 +9,7 @@ const loginUserController = require('./Api/loginUser')
 
 const homeController = require('./controllers/home')
 const login_registerController = require('./controllers/login_register')
+const contactController = require('./controllers/contact')
 
 app.set('view engine','ejs')
 app.use(express.static('public'))
@@ -20,7 +21,7 @@ connectDB();
 
 app.get('/', homeController)
 app.get('/login_register', login_registerController)
-
+app.get('/contact', contactController)
 
 app.listen(50005, ()=>{
     console.log('start')
