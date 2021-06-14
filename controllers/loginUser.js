@@ -14,6 +14,7 @@ module.exports = (req, res) =>{
           if(same){ 
             req.session.userId = user._id
             req.session.isProfessor = user.isProfessor
+            req.session.userName = user.username
             res.redirect('/')
           }
           else{
